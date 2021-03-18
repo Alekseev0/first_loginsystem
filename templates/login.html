@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Хостинг</title>
+        <link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
+    </head>
+    <body>
+        <div id = "container">
+            <div id = "head">
+            <div><center><h1>WEB-site</h1></center></div>
+            </div>
+            <div id = "formContainer">
+                <center>
+                <form action = "">
+            <label for = "Email">Ваша почта</label>
+            <input type = "text" id = "Email" name= "Email" placeholder = "type ur login">
+        <br>
+
+            <button id="sendMsg">Отправить письмо</button>
+
+                </form>
+                </center>
+
+            <center>
+                <p><a href = "/registration">Регистрация</a>
+                    <a href = "/login">Забыли пароль?</a>
+                </p>
+            </center>
+            </div>
+        </div>
+        <script>
+
+            let body = document.querySelector('body');
+            document.querySelector('#red').onclick = function() {
+                body.style.backgroundColor = 'red';
+            };
+            document.querySelector('#green').onclick = function() {
+                body.style.backgroundColor = 'green';
+            };
+            document.querySelector('#blue').onclick = function() {
+                body.style.backgroundColor = 'blue';
+            };
+
+        </script>
+    </body>
+</html>
