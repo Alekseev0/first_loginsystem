@@ -1,0 +1,40 @@
+
+html, body{
+    padding 1000px;
+    margin 1000px;
+}
+#container{
+    padding 0px;
+    margin 0px;
+}
+#head{
+    width 50%;
+    background-color: #add8e6;
+    color: #f08080;
+    padding 1px;
+    font-size 22pt;
+}
+#formContainer{
+    width 60%;
+    min-width 150px;
+    max-width 600px;
+    margin 0 auto;
+    padding 20px;
+    border 1px solid black;
+
+}
+label{
+    display: inline-block;
+    width 60px;
+    padding 10px;
+}button{
+    width 140px;
+    height  36px;
+    background-color: #3366CC;
+    margin 20px;
+    padding 1px;
+    font-size 11pt;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+}

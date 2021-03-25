@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 
-{% import "bootstrap/wtf.html" as wtf %}
-
 <html lang="en">
     <head>
-        <title>Хостинг</title>
-        <link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
+        <title>Login</title>
+        <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
         <div id = "container">
-            <div id = "head">
-            <div><center><h1>WEB-site for {{name}}</h1></center></div>
+            <div id = "header">
+                <h1>Sweet buns</h1>
+                <p>Live tasty!, {{ login }}</p>
             </div>
+
             <div id = "formContainer">
-                <center>
-                <form action = "/" method="POST">
-                {{ form.hidden_tag() }}
-                {{ wtf.form_field(form.username) }}
-                {{ wtf.form_field(form.password) }}
-            <button id="enter">ВОЙТИ</button>
 
-                </form>
-                </center>
+            <form action="/" method="POST">
+                <br>
+                <label for = "email">Email</label>
+                <input type = "email" id = "email" name = "email" placeholder = "type your email", required>
+                <br>
+                <label for = "password">Password</label>
+                <input type = "password" id = "password" name = "password" placeholder = "type your password", required>
+                <button id="reg">Login</button></button>
+            </form>
 
-            <center>
-                <p><a href = "/registration">Регистрация</a>
-                    <a href = "/login">Забыли пароль?</a>
-                </p>
-            </center>
-            </div>
-        </div>
+            <p>
+                <a href = "{{ url_for('registration') }}">Registration</a>
+                <a href = "/login">Forgot your password?</a>
+            </p>
+
+           </div>
+
+    </div>
         <script>
 
             let body = document.querySelector('body');

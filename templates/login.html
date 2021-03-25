@@ -2,33 +2,30 @@
 
 <html lang="en">
     <head>
-        <title>Хостинг</title>
-        <link rel="stylesheet" href="{{url_for('.static', filename='main.css')}}">
+        <title>Recovery</title>
+        <link rel = "stylesheet" href = "styles.css">
     </head>
     <body>
         <div id = "container">
-            <div id = "head">
-            <div><center><h1>WEB-site</h1></center></div>
+            <div id = "header">
+                <h1>Sweet buns</h1>
+                <p>Live tasty!</p>
             </div>
-            <div id = "formContainer">
-                <center>
-                <form action = "">
-            <label for = "Email">Ваша почта</label>
-            <input type = "text" id = "Email" name= "Email" placeholder = "type ur login">
-        <br>
+        <div id = "formContainer">
+            <h2>Enter your email to recover</h2>
+            <form action>
+                <input type = "email" id = "email" name = "email" placeholder = "type your email">
+                <br>
+                <button id="enter">Restore password</button></button>
+            </form>
 
-            <button id="sendMsg">Отправить письмо</button>
+            <p>
+                <a href = "{{ url_for('index') }}">Input</a>
+                <a href = "{{ url_for('registration') }}">Registration</a>
+            </p>
+       </div>
 
-                </form>
-                </center>
-
-            <center>
-                <p><a href = "/registration">Регистрация</a>
-                    <a href = "/login">Забыли пароль?</a>
-                </p>
-            </center>
-            </div>
-        </div>
+    </div>
         <script>
 
             let body = document.querySelector('body');
