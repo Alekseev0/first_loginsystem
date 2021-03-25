@@ -24,9 +24,10 @@ def index():
     if request.method == 'POST' and 'email' in request.form and 'password' in request.form:
         email = request.form.get('email')
         password = request.form.get('password')
-        user = User.query.filter_by(email=email, password=password).first()
+        name = request.form.get('username')
+        user = User.query.filter_by(email=email, password=password, name=name).first()
         if user:
-            return redirect(url_for('greet'))
+            return greet(name)
         if not user:
             msg = 'User is not created'
     elif request.method == 'POST':
@@ -61,8 +62,8 @@ def login():
     return render_template("login.html")
 
 @app.route("/greet")
-def greet():
-    return render_template("greet.html", login=request.args.get("login", "gaylord"))
+def greet(name):
+    return render_template("greet.html", login=request.args.get("login", name))
 
 
 
